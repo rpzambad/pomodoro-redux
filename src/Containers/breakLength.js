@@ -4,7 +4,7 @@ import { increaseBreakTime, decreaseBreakTime } from '../Actions/breakLength'
 
 const mapStateToProps = (state) => {
   return {
-    breakMeter: state,
+    breakMeter: state.breakReducer,
   }
 }
 

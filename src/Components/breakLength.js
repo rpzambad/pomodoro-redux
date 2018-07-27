@@ -1,6 +1,7 @@
 import React from 'react'
 
 class BreakLength extends React.Component {
+
   handleIncrement = () => {
     this.props.incMeter()
   }
