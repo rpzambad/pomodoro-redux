@@ -1,6 +1,6 @@
 import { INCREMENT, DECREMENT } from '../Actions/breakLength'
 
-const breakReducer = (state = 0, action) => {
+const sessionReducer = (state = 5, action) => {
   switch(action.type) {
   case INCREMENT:
     return state + 1
@@ -11,4 +11,4 @@ const breakReducer = (state = 0, action) => {
   }
 }
 
-export default breakReducer
+export default sessionReducer

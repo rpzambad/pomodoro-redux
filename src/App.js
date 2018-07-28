@@ -1,7 +1,7 @@
 import React from 'react'
 import BreakLength from './Containers/breakLength'
-import SessionLength from './Components/sessionLength'
-import Clock from './Components/clock'
+import SessionLength from './Containers/sessionLengthContainer'
+import Clock from './Containers/clockContainer'
 import './App.css'
 
 class App extends React.Component {
