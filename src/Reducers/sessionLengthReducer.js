@@ -1,11 +1,11 @@
-import { INCREMENT, DECREMENT } from '../Actions/breakLength'
+import { INCREMENT, DECREMENT } from '../Actions/sessionLength'
 
-const sessionReducer = (state = 5, action) => {
+const sessionReducer = (state = 600, action) => {
   switch(action.type) {
   case INCREMENT:
-    return state + 1
+    return state + 60
   case DECREMENT:
-    if (state) return state - 1
+    if (state) return state - 60
   default:
     return state
   }

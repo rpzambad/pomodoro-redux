@@ -1,22 +1,15 @@
 import React from 'react'
+import moment from 'moment'
 
 class BreakLength extends React.Component {
-
-  handleIncrement = () => {
-    this.props.incMeter()
-  }
-
-  handleDecrement = () => {
-    this.props.decMeter()
-  }
 
   render() {
     return (
       <div className='break-container'>
         <h3>Break Length</h3>
-        <button onClick={this.handleIncrement}>+</button>
-        {this.props.breakMeter}
-        <button onClick={this.handleDecrement}>-</button>
+        <button onClick={this.props.incBreakMeter}>+</button>
+        {moment().startOf('hour').seconds(this.props.breakMeter).format('mm:ss')}
+        <button onClick={this.props.decBreakMeter}>-</button>
       </div>
     )
   }

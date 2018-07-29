@@ -10,10 +10,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incMeter: () => {
+    incBreakMeter: () => {
       dispatch(increaseBreakTime())
     },
-    decMeter: () => {
+    decBreakMeter: () => {
       dispatch(decreaseBreakTime())
     },
   }

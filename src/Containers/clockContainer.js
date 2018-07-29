@@ -3,7 +3,7 @@ import Clock from '../Components/clock'
 
 const mapStateToProps = (state) => {
   return {
-    breakLength: state.breakReducer,
+    sessionLength: state.sessionReducer,
   }
 }
 

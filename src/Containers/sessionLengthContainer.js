@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import SessionLength from '../Components/sessionLength'
-import { increaseBreakTime, decreaseBreakTime } from '../Actions/breakLength'
+import { increaseSessionTime, decreaseSessionTime } from '../Actions/sessionLength'
 
 const mapStateToProps = (state) => {
   return {
@@ -10,11 +10,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incMeter: () => {
-      dispatch(increaseBreakTime())
+    incSessionMeter: () => {
+      dispatch(increaseSessionTime())
     },
-    decMeter: () => {
-      dispatch(decreaseBreakTime())
+    decSessionMeter: () => {
+      dispatch(decreaseSessionTime())
     },
   }
 }
