@@ -1,6 +1,6 @@
 import { START, PAUSE } from  '../Actions/clockActions'
 
-const clockReducer = (state = 1000, action) => {
+const clockReducer = (state = 10, action) => {
   switch(action.type) {
     case START:
       if (state) return state - 1

@@ -1,16 +1,26 @@
 import React from 'react'
+var interval
 
-class ClockController extends React.Component {
+class ClockController extends React.Component {  
 
   handlePlay = () => {
-    setInterval(this.props.startSessionTimer, 1000)
-  }  
+    if (!interval) {
+      interval = setInterval(this.props.startTime, 1000)
+    }
+  }
+
+  handlePause = () => {
+    if (interval) {
+      clearInterval(interval)
+      interval = null
+    }
+  }
 
   render() {
     return (
       <div>
         <button onClick={this.handlePlay}>Play</button>
-        <button>Pause</button>
+        <button onClick={this.handlePause}>Pause</button>
       </div>
     )
   }

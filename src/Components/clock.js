@@ -6,7 +6,7 @@ class Clock extends React.Component {
     return (
       <div className='clock-container'>
         <h2>Session</h2>
-        {moment().startOf('hour').seconds(this.props.sessionLength).format('mm:ss')}
+        {moment().startOf('hour').seconds(this.props.clock).format('mm:ss')}
       </div>
     )
   }
